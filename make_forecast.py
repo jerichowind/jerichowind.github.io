@@ -29,11 +29,14 @@ def organize_forecast_by_time(all_forecasts, days=5):
     now = datetime.now(vancouver_tz)
     end_time = now + timedelta(days=days)
     
-    # Create time slots (hourly)
+    # Create time slots (hourly, only 9 AM to 9 PM)
     time_slots = []
     current = now.replace(minute=0, second=0, microsecond=0)
+    
     while current <= end_time:
-        time_slots.append(int(current.timestamp()))
+        # Only include hours between 9 AM (09:00) and 9 PM (21:00)
+        if 9 <= current.hour <= 21:
+            time_slots.append(int(current.timestamp()))
         current += timedelta(hours=1)
     
     organized_data = []
