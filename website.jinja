@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jericho Wind Forecast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wind-light': '#e0f2fe',
+                        'wind-medium': '#0ea5e9',
+                        'wind-strong': '#dc2626'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .wind-arrow {
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 16px solid #374151;
+            transform-origin: center center;
+            position: relative;
+            top: 2px;
+        }
+        .wind-arrow-container {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">Jericho Beach Wind Forecast</h1>
+            <p class="text-gray-600">Last updated: {{ generated_at.strftime('%Y-%m-%d %H:%M %Z') }}</p>
+        </header>
+
+        <!-- Forecast Section -->
+        <section class="mb-12">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold text-gray-800">5-Day Hourly Forecast</h2>
+                
+                <!-- Metric Selector -->
+                <select id="metricSelector" class="px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="wind">Wind (Speed/Gust/Direction)</option>
+                    <option value="temperature">Temperature</option>
+                </select>
+            </div>
+            
+            <!-- Tab Navigation -->
+            <div class="border-b border-gray-200 mb-6">
+                <nav class="-mb-px flex space-x-8 overflow-x-auto">
+                    {% for day_data in days_data %}
+                    <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
+                        {% if loop.first %}border-blue-500 text-blue-600{% else %}border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300{% endif %}"
+                        data-tab="day-{{ loop.index0 }}">
+                        {{ day_data.date.strftime('%a %m/%d') }}
+                    </button>
+                    {% endfor %}
+                </nav>
+            </div>
+
+            <!-- Tab Content -->
+            {% for day_data in days_data %}
+            <div id="day-{{ loop.index0 }}" class="tab-content {% if not loop.first %}hidden{% endif %}">
+                <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
+                    <table class="min-w-full">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Time</th>
+                                {% for provider in providers %}
+                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
+                                    {{ provider.replace('_', ' ').title() }}
+                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
+                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
+                                </th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            {% for slot in day_data.forecasts %}
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 text-sm">
+                                    <div class="font-medium">{{ slot.datetime.strftime('%H:%M') }}</div>
+                                </td>
+                                {% for provider in providers %}
+                                <td class="px-4 py-3 text-center text-sm">
+                                    {% if provider in slot.forecasts %}
+                                    {% set forecast = slot.forecasts[provider] %}
+                                    
+                                    <!-- Wind Data -->
+                                    <div class="wind-data space-y-1">
+                                        <div class="flex justify-center items-center space-x-2">
+                                            <span class="px-2 py-1 rounded text-xs font-medium
+                                                {% if forecast.speed_knots < 10 %}bg-green-100 text-green-800
+                                                {% elif forecast.speed_knots < 20 %}bg-yellow-100 text-yellow-800
+                                                {% else %}bg-red-100 text-red-800{% endif %}">
+                                                {{ "%.0f"|format(forecast.speed_knots) }}
+                                            </span>
+                                            <span class="text-gray-600">{{ "%.0f"|format(forecast.gust_knots) }}</span>
+                                        </div>
+                                        <div class="flex justify-center items-center">
+                                            <div class="wind-arrow-container">
+                                                <div class="wind-arrow" style="transform: rotate({{ forecast.direction }}deg)"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Temperature Data -->
+                                    <div class="temp-data hidden">
+                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
+                                            {% if forecast.temperature < 10 %}bg-blue-100 text-blue-800
+                                            {% elif forecast.temperature < 20 %}bg-green-100 text-green-800
+                                            {% elif forecast.temperature < 30 %}bg-yellow-100 text-yellow-800
+                                            {% else %}bg-red-100 text-red-800{% endif %}">
+                                            {{ "%.1f"|format(forecast.temperature) }}°C
+                                        </span>
+                                    </div>
+                                    
+                                    {% else %}
+                                    <span class="text-gray-400 text-xs">No data</span>
+                                    {% endif %}
+                                </td>
+                                {% endfor %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Legend -->
+                <div class="mt-4 flex flex-wrap gap-4 text-sm">
+                    <div class="wind-legend">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 rounded text-xs bg-green-100 text-green-800">Low</span>
+                                <span class="text-gray-600">&lt; 10 knots</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 rounded text-xs bg-yellow-100 text-yellow-800">Medium</span>
+                                <span class="text-gray-600">10-20 knots</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 rounded text-xs bg-red-100 text-red-800">High</span>
+                                <span class="text-gray-600">&gt; 20 knots</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="temp-legend hidden">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 rounded text-xs bg-blue-100 text-blue-800">Cold</span>
+                                <span class="text-gray-600">&lt; 10°C</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 rounded text-xs bg-green-100 text-green-800">Cool</span>
+                                <span class="text-gray-600">10-20°C</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 rounded text-xs bg-yellow-100 text-yellow-800">Warm</span>
+                                <span class="text-gray-600">20-30°C</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 rounded text-xs bg-red-100 text-red-800">Hot</span>
+                                <span class="text-gray-600">&gt; 30°C</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+
+        <!-- Forecast Accuracy Section (Placeholder) -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Forecast Accuracy Analysis</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="text-center text-gray-500">
+                    <div class="text-6xl mb-4">📊</div>
+                    <h3 class="text-xl font-medium mb-2">Coming Soon</h3>
+                    <p class="text-gray-600">
+                        Historical forecast accuracy comparison will be displayed here.<br>
+                        This will show how well each model performed for 1-day, 2-day, up to 5-day forecasts.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-600 text-sm">
+            <p>Data sources: Windy.app (GFS, ECMWF, ICON), WindFinder, JSCA Weather Station</p>
+        </footer>
+    </div>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active state from all tabs
+                document.querySelectorAll('.tab-button').forEach(tab => {
+                    tab.classList.remove('border-blue-500', 'text-blue-600');
+                    tab.classList.add('border-transparent', 'text-gray-500');
+                });
+                
+                // Hide all tab content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                // Activate clicked tab
+                button.classList.remove('border-transparent', 'text-gray-500');
+                button.classList.add('border-blue-500', 'text-blue-600');
+                
+                // Show corresponding content
+                const targetId = button.getAttribute('data-tab');
+                document.getElementById(targetId).classList.remove('hidden');
+            });
+        });
+
+        // Metric selector functionality
+        document.getElementById('metricSelector').addEventListener('change', (e) => {
+            const selectedMetric = e.target.value;
+            
+            if (selectedMetric === 'wind') {
+                // Show wind data and headers
+                document.querySelectorAll('.wind-data, .wind-header, .wind-legend').forEach(el => {
+                    el.classList.remove('hidden');
+                });
+                // Hide temperature data and headers
+                document.querySelectorAll('.temp-data, .temp-header, .temp-legend').forEach(el => {
+                    el.classList.add('hidden');
+                });
+            } else {
+                // Show temperature data and headers
+                document.querySelectorAll('.temp-data, .temp-header, .temp-legend').forEach(el => {
+                    el.classList.remove('hidden');
+                });
+                // Hide wind data and headers
+                document.querySelectorAll('.wind-data, .wind-header, .wind-legend').forEach(el => {
+                    el.classList.add('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
