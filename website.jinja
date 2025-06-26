@@ -142,48 +142,48 @@
                 </div>
 
                 <!-- Legend -->
-                <div class="mt-4 flex flex-wrap gap-4 text-sm">
+                <div class="mt-4 flex flex-wrap gap-2 sm:gap-4 text-sm">
                     <div class="wind-legend">
-                        <div class="flex items-center space-x-4">
-                            <div class="flex items-center space-x-2">
+                        <div class="flex flex-wrap items-center gap-2 sm:gap-4">
+                            <div class="flex items-center space-x-1 sm:space-x-2">
                                 <span class="px-2 py-1 rounded text-xs bg-gray-100 text-gray-600">Light</span>
-                                <span class="text-gray-600">&lt; 3 knots</span>
+                                <span class="text-gray-600 text-xs sm:text-sm">&lt; 3 knots</span>
                             </div>
-                            <div class="flex items-center space-x-2">
+                            <div class="flex items-center space-x-1 sm:space-x-2">
                                 <span class="px-2 py-1 rounded text-xs bg-green-100 text-green-800">Low</span>
-                                <span class="text-gray-600">3-9 knots</span>
+                                <span class="text-gray-600 text-xs sm:text-sm">3-9 knots</span>
                             </div>
-                            <div class="flex items-center space-x-2">
+                            <div class="flex items-center space-x-1 sm:space-x-2">
                                 <span class="px-2 py-1 rounded text-xs bg-yellow-100 text-yellow-800">Medium</span>
-                                <span class="text-gray-600">9-16 knots</span>
+                                <span class="text-gray-600 text-xs sm:text-sm">9-16 knots</span>
                             </div>
-                            <div class="flex items-center space-x-2">
+                            <div class="flex items-center space-x-1 sm:space-x-2">
                                 <span class="px-2 py-1 rounded text-xs bg-orange-100 text-orange-800">Strong</span>
-                                <span class="text-gray-600">16-25 knots</span>
+                                <span class="text-gray-600 text-xs sm:text-sm">16-25 knots</span>
                             </div>
-                            <div class="flex items-center space-x-2">
+                            <div class="flex items-center space-x-1 sm:space-x-2">
                                 <span class="px-2 py-1 rounded text-xs bg-red-100 text-red-800">Very Strong</span>
-                                <span class="text-gray-600">&gt; 25 knots</span>
+                                <span class="text-gray-600 text-xs sm:text-sm">&gt; 25 knots</span>
                             </div>
                         </div>
                     </div>
                     <div class="temp-legend hidden">
-                        <div class="flex items-center space-x-4">
-                            <div class="flex items-center space-x-2">
+                        <div class="flex flex-wrap items-center gap-2 sm:gap-4">
+                            <div class="flex items-center space-x-1 sm:space-x-2">
                                 <span class="px-2 py-1 rounded text-xs bg-blue-100 text-blue-800">Cold</span>
-                                <span class="text-gray-600">&lt; 10°C</span>
+                                <span class="text-gray-600 text-xs sm:text-sm">&lt; 10°C</span>
                             </div>
-                            <div class="flex items-center space-x-2">
+                            <div class="flex items-center space-x-1 sm:space-x-2">
                                 <span class="px-2 py-1 rounded text-xs bg-green-100 text-green-800">Cool</span>
-                                <span class="text-gray-600">10-20°C</span>
+                                <span class="text-gray-600 text-xs sm:text-sm">10-20°C</span>
                             </div>
-                            <div class="flex items-center space-x-2">
+                            <div class="flex items-center space-x-1 sm:space-x-2">
                                 <span class="px-2 py-1 rounded text-xs bg-yellow-100 text-yellow-800">Warm</span>
-                                <span class="text-gray-600">20-30°C</span>
+                                <span class="text-gray-600 text-xs sm:text-sm">20-30°C</span>
                             </div>
-                            <div class="flex items-center space-x-2">
+                            <div class="flex items-center space-x-1 sm:space-x-2">
                                 <span class="px-2 py-1 rounded text-xs bg-red-100 text-red-800">Hot</span>
-                                <span class="text-gray-600">&gt; 30°C</span>
+                                <span class="text-gray-600 text-xs sm:text-sm">&gt; 30°C</span>
                             </div>
                         </div>
                     </div>
@@ -208,8 +208,9 @@
         </section>
 
         <!-- Footer -->
-        <footer class="text-center text-gray-600 text-sm">
-            <p>Data sources: Windy.app (GFS, ECMWF, ICON), WindFinder, JSCA Weather Station</p>
+        <footer class="text-center text-gray-600 text-sm px-4">
+            <p class="sm:inline block">Data sources: Windy.app (GFS, ECMWF, ICON),</p>
+            <p class="sm:inline block">WindFinder, JSCA Weather Station</p>
         </footer>
     </div>
 
