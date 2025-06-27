@@ -36,6 +36,10 @@
             align-items: center;
             justify-content: center;
         }
+        .weather-icon {
+            font-size: 1.2em;
+            margin-right: 0.25rem;
+        }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -92,7 +96,21 @@
                             {% for slot in day_data.forecasts %}
                             <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-3 text-sm">
-                                    <div class="font-medium">{{ slot.datetime.strftime('%H:%M') }}</div>
+                                    <div class="font-medium flex items-center">
+                                        {% if slot.weather_condition %}
+                                        <span class="weather-icon">
+                                            {% if slot.weather_condition == 'sunny' %}🌞
+                                            {% elif slot.weather_condition == 'partly-cloudy' %}⛅
+                                            {% elif slot.weather_condition == 'cloudy' %}☁️
+                                            {% elif slot.weather_condition == 'rainy' %}🌧️
+                                            {% elif slot.weather_condition == 'snowy' %}❄️
+                                            {% elif slot.weather_condition == 'windy' %}💨
+                                            {% else %}
+                                            {% endif %}
+                                        </span>
+                                        {% endif %}
+                                        {{ slot.datetime.strftime('%H:%M') }}
+                                    </div>
                                 </td>
                                 {% for provider in providers %}
                                 <td class="px-4 py-3 text-center text-sm">
@@ -210,7 +228,7 @@
         <!-- Footer -->
         <footer class="text-center text-gray-600 text-sm px-4">
             <p class="sm:inline block">Data sources: Windy.app (GFS, ECMWF, ICON),</p>
-            <p class="sm:inline block">WindFinder, JSCA Weather Station</p>
+            <p class="sm:inline block">WindFinder, PirateWeather, JSCA Weather Station</p>
         </footer>
     </div>
 

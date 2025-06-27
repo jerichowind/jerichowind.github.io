@@ -205,11 +205,82 @@ def update_jericho_weather_history(filename='jsca_weather.jsonl'):
                 f.write(json.dumps(item) + '\n')
         print(f"Added {len(new_data)} new records to {filename}")
 
+def get_pirateweather_forecast():
+    """Get weather forecast from Pirateweather API including precipitation and conditions."""
+    # Jericho Beach coordinates
+    lat, lon = 49.28269, -123.20581  # 49°16'57.7"N 123°12'20.9"W converted to decimal
+    
+    # You'll need to get a free API key from pirateweather.net
+    api_key = os.environ['PIRATE_WEATHER_API_KEY']
+    
+    # Use SI units to get wind in m/s (easier to convert to knots)
+    url = f'https://api.pirateweather.net/forecast/{api_key}/{lat},{lon}?units=si&exclude=minutely,daily,alerts&extend=hourly'
+    
+    try:
+        response = requests.get(url)
+        if response.status_code != 200:
+            print(f"Pirateweather API error: {response.status_code}")
+            return []
+        
+        data = response.json()
+        return normalize_pirateweather(data)
+    except Exception as e:
+        print(f"Error fetching Pirateweather data: {e}")
+        return []
+
+def normalize_pirateweather(data):
+    """Normalize Pirateweather data to match our format."""
+    normalized_data = []
+    
+    if 'hourly' not in data or 'data' not in data['hourly']:
+        return normalized_data
+    
+    for item in data['hourly']['data']:
+        # Map weather conditions to simple categories
+        icon = item['icon']
+        condition = map_weather_condition(icon)
+        wind_direction = item['windBearing']
+        wind_direction = (wind_direction + 180) % 360  # Convert to meteorological convention
+        normalized_item = {
+            'time': item['time'],
+            'speed_knots': ms_to_knots(item.get('windSpeed', 0)),
+            'gust_knots': ms_to_knots(item.get('windGust', 0)),
+            'direction': wind_direction,
+            'temperature': item.get('temperature', 0),
+            'condition': condition,
+            'icon': icon,
+            'precipitation_probability': (item.get('precipProbability', 0) * 100),
+            'precipitation_intensity': item.get('precipIntensity', 0),
+            'cloud_cover': (item.get('cloudCover', 0) * 100)
+        }
+        normalized_data.append(normalized_item)
+    
+    return normalized_data
+
+def map_weather_condition(icon):
+    """Map Pirateweather icons to simple weather conditions."""
+    condition_map = {
+        'clear-day': 'sunny',
+        'clear-night': 'clear',
+        'rain': 'rainy',
+        'snow': 'snowy',
+        'sleet': 'rainy',
+        'wind': 'windy',
+        'fog': 'cloudy',
+        'cloudy': 'cloudy',
+        'partly-cloudy-day': 'partly-cloudy',
+        'partly-cloudy-night': 'partly-cloudy',
+        'thunderstorm': 'rainy',
+        'hail': 'rainy'
+    }
+    return condition_map.get(icon, 'unknown')
+
 FORECASTS = {
     'windy_gfs27_long': functools.partial(get_windy_forecast, 'gfs27_long'),
     'windy_ecmwf': functools.partial(get_windy_forecast, 'ecmwf'),
     'windy_iconglobal': functools.partial(get_windy_forecast, 'iconglobal'),
     'windfinder': get_windfinder_forecast,
+    'pirateweather': get_pirateweather_forecast,
 }
 
 def save_forecast(forecast_name, data):

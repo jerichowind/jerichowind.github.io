@@ -45,7 +45,9 @@ def organize_forecast_by_time(all_forecasts, days=5):
         slot_data = {
             'timestamp': timestamp,
             'datetime': datetime.fromtimestamp(timestamp, vancouver_tz),
-            'forecasts': {}
+            'forecasts': {},
+            'weather_condition': None,
+            'precipitation_probability': None
         }
         
         # Find closest forecast for each provider
@@ -61,6 +63,11 @@ def organize_forecast_by_time(all_forecasts, days=5):
             
             if closest_forecast and min_diff <= 3600:  # Within 1 hour
                 slot_data['forecasts'][provider] = closest_forecast
+                
+                # Use Pirateweather for weather conditions (prioritize it)
+                if provider == 'pirateweather' and 'condition' in closest_forecast:
+                    slot_data['weather_condition'] = closest_forecast['condition']
+                    slot_data['precipitation_probability'] = closest_forecast.get('precipitation_probability', 0)
         
         organized_data.append(slot_data)
     
