@@ -275,12 +275,55 @@ def map_weather_condition(icon):
     }
     return condition_map.get(icon, 'unknown')
 
+def get_weatherlabs_forecast():
+    """Get weather forecast from WeatherLabs API."""
+    url = 'https://jweather-public.s3.us-west-2.amazonaws.com/prediction_dump/latest_forecast/99ab6a.json'
+    
+    try:
+        response = requests.get(url)
+        if response.status_code != 200:
+            print(f"WeatherLabs API error: {response.status_code}")
+            return []
+        
+        data = response.json()
+        return normalize_weatherlabs(data)
+    except Exception as e:
+        print(f"Error fetching WeatherLabs data: {e}")
+        return []
+
+def normalize_weatherlabs(data):
+    """Normalize WeatherLabs data to match our format."""
+    normalized_data = []
+    
+    if 'forecast' not in data:
+        return normalized_data
+    
+    for item in data['forecast']:
+        # Use mean values for consistency with other forecasts
+        wind_speed_knots = item['wind_speed']['mean']
+        gust_speed_knots = item['gust_speed']['mean']
+        wind_direction = item['wind_dir']['mean']
+        wind_direction = (wind_direction + 180) % 360  # Convert to meteorological convention
+        temperature = item['temp']['mean']
+        
+        normalized_item = {
+            'time': item['target_ts'],
+            'speed_knots': wind_speed_knots,
+            'gust_knots': gust_speed_knots,
+            'direction': wind_direction,
+            'temperature': temperature,
+        }
+        normalized_data.append(normalized_item)
+    
+    return normalized_data
+
 FORECASTS = {
     'windy_gfs27_long': functools.partial(get_windy_forecast, 'gfs27_long'),
     'windy_ecmwf': functools.partial(get_windy_forecast, 'ecmwf'),
     'windy_iconglobal': functools.partial(get_windy_forecast, 'iconglobal'),
     'windfinder': get_windfinder_forecast,
     'pirateweather': get_pirateweather_forecast,
+    'weatherlabs': get_weatherlabs_forecast,
 }
 
 def save_forecast(forecast_name, data):
@@ -316,25 +359,6 @@ def run_periodic_save():
             time.sleep(60)  # Wait a minute to avoid multiple saves in the same minute
         time.sleep(1)
 
-def generate_website():
-    """Generate the website HTML file."""
-    from make_forecast import get_website_data
-    
-    # Get data for the website
-    data = get_website_data()
-    
-    # Load the Jinja template
-    with open('website.jinja', 'r') as f:
-        template = Template(f.read())
-    
-    # Render the template with data
-    html_content = template.render(**data)
-    
-    # Save to HTML file
-    with open('index.html', 'w') as f:
-        f.write(html_content)
-    
-    print("Website generated: index.html")
 
 if __name__ == "__main__":
     console = Console()
@@ -363,8 +387,5 @@ if __name__ == "__main__":
 
     console.print(table)
     update_jericho_weather_history()
-    
-    # Generate website
-    generate_website()
     
     run_periodic_save()

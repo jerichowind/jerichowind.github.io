@@ -85,7 +85,11 @@
                                 <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Time</th>
                                 {% for provider in providers %}
                                 <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    {{ provider.replace('_', ' ').title() }}
+                                    {% if provider == 'weatherlabs' %}
+                                        WeatherLabs
+                                    {% else %}
+                                        {{ provider.replace('_', ' ').title() }}
+                                    {% endif %}
                                     <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
                                     <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
                                 </th>
@@ -228,7 +232,7 @@
         <!-- Footer -->
         <footer class="text-center text-gray-600 text-sm px-4">
             <p class="sm:inline block">Data sources: Windy.app (GFS, ECMWF, ICON),</p>
-            <p class="sm:inline block">WindFinder, PirateWeather, JSCA Weather Station</p>
+            <p class="sm:inline block">WindFinder, PirateWeather, WeatherLabs, JSCA Weather Station</p>
         </footer>
     </div>
 
