@@ -47,7 +47,7 @@
         <!-- Header -->
         <header class="mb-8">
             <h1 class="text-4xl font-bold text-gray-800 mb-2">Jericho Beach Wind Forecast</h1>
-            <p class="text-gray-600">Last updated: 2025-07-22 21:58 PDT</p>
+            <p class="text-gray-600">Last updated: 2025-07-22 22:28 PDT</p>
         </header>
 
         <!-- Forecast Section -->
@@ -69,36 +69,30 @@
                     <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
                         border-blue-500 text-blue-600"
                         data-tab="day-0">
-                        Tue 07/22
-                    </button>
-                    
-                    <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
-                        border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                        data-tab="day-1">
                         Wed 07/23
                     </button>
                     
                     <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
                         border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                        data-tab="day-2">
+                        data-tab="day-1">
                         Thu 07/24
                     </button>
                     
                     <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
                         border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                        data-tab="day-3">
+                        data-tab="day-2">
                         Fri 07/25
                     </button>
                     
                     <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
                         border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                        data-tab="day-4">
+                        data-tab="day-3">
                         Sat 07/26
                     </button>
                     
                     <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
                         border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                        data-tab="day-5">
+                        data-tab="day-4">
                         Sun 07/27
                     </button>
                     
@@ -108,331 +102,6 @@
             <!-- Tab Content -->
             
             <div id="day-0" class="tab-content ">
-                <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
-                    <table class="min-w-full">
-                        <thead class="bg-gray-100">
-                            <tr>
-                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Time</th>
-                                
-                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    
-                                        Windy Gfs27 Long
-                                    
-                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
-                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
-                                </th>
-                                
-                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    
-                                        Windy Ecmwf
-                                    
-                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
-                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
-                                </th>
-                                
-                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    
-                                        Windy Iconglobal
-                                    
-                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
-                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
-                                </th>
-                                
-                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    
-                                        Windfinder
-                                    
-                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
-                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
-                                </th>
-                                
-                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    
-                                        Pirateweather
-                                    
-                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
-                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
-                                </th>
-                                
-                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    
-                                        WeatherLabs
-                                    
-                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
-                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
-                                </th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                            
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 text-sm">
-                                    <div class="font-medium flex items-center">
-                                        
-                                        <span class="weather-icon">
-                                            🌞
-                                            
-                                        </span>
-                                        
-                                        21:00
-                                    </div>
-                                </td>
-                                
-                                <td class="px-4 py-3 text-center text-sm">
-                                    
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-gray-100 text-gray-600
-                                                ">
-                                                3
-                                            </span>
-                                            <span class="text-gray-600">4</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(309deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-green-100 text-green-800
-                                            ">
-                                            19.3°C
-                                        </span>
-                                    </div>
-                                    
-                                    
-                                </td>
-                                
-                                <td class="px-4 py-3 text-center text-sm">
-                                    
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-gray-100 text-gray-600
-                                                ">
-                                                1
-                                            </span>
-                                            <span class="text-gray-600">5</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(61deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-yellow-100 text-yellow-800
-                                            ">
-                                            20.9°C
-                                        </span>
-                                    </div>
-                                    
-                                    
-                                </td>
-                                
-                                <td class="px-4 py-3 text-center text-sm">
-                                    
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-green-100 text-green-800
-                                                ">
-                                                4
-                                            </span>
-                                            <span class="text-gray-600">9</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(323deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-yellow-100 text-yellow-800
-                                            ">
-                                            20.2°C
-                                        </span>
-                                    </div>
-                                    
-                                    
-                                </td>
-                                
-                                <td class="px-4 py-3 text-center text-sm">
-                                    
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-green-100 text-green-800
-                                                ">
-                                                3
-                                            </span>
-                                            <span class="text-gray-600">5</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(309.28999999999996deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-yellow-100 text-yellow-800
-                                            ">
-                                            20.0°C
-                                        </span>
-                                    </div>
-                                    
-                                    
-                                </td>
-                                
-                                <td class="px-4 py-3 text-center text-sm">
-                                    
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-green-100 text-green-800
-                                                ">
-                                                5
-                                            </span>
-                                            <span class="text-gray-600">7</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(310deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-yellow-100 text-yellow-800
-                                            ">
-                                            20.4°C
-                                        </span>
-                                    </div>
-                                    
-                                    
-                                </td>
-                                
-                                <td class="px-4 py-3 text-center text-sm">
-                                    
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-gray-100 text-gray-600
-                                                ">
-                                                2
-                                            </span>
-                                            <span class="text-gray-600">4</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(69.58386993408203deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-yellow-100 text-yellow-800
-                                            ">
-                                            20.7°C
-                                        </span>
-                                    </div>
-                                    
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Legend -->
-                <div class="mt-4 flex flex-wrap gap-2 sm:gap-4 text-sm">
-                    <div class="wind-legend">
-                        <div class="flex flex-wrap items-center gap-2 sm:gap-4">
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-gray-100 text-gray-600">Light</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">&lt; 3 knots</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-green-100 text-green-800">Low</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">3-9 knots</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-yellow-100 text-yellow-800">Medium</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">9-16 knots</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-orange-100 text-orange-800">Strong</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">16-25 knots</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-red-100 text-red-800">Very Strong</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">&gt; 25 knots</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="temp-legend hidden">
-                        <div class="flex flex-wrap items-center gap-2 sm:gap-4">
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-blue-100 text-blue-800">Cold</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">&lt; 10°C</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-green-100 text-green-800">Cool</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">10-20°C</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-yellow-100 text-yellow-800">Warm</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">20-30°C</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-red-100 text-red-800">Hot</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">&gt; 30°C</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="day-1" class="tab-content hidden">
                 <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
                     <table class="min-w-full">
                         <thead class="bg-gray-100">
@@ -3232,7 +2901,7 @@
                 </div>
             </div>
             
-            <div id="day-2" class="tab-content hidden">
+            <div id="day-1" class="tab-content hidden">
                 <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
                     <table class="min-w-full">
                         <thead class="bg-gray-100">
@@ -6113,7 +5782,7 @@
                 </div>
             </div>
             
-            <div id="day-3" class="tab-content hidden">
+            <div id="day-2" class="tab-content hidden">
                 <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
                     <table class="min-w-full">
                         <thead class="bg-gray-100">
@@ -8994,7 +8663,7 @@
                 </div>
             </div>
             
-            <div id="day-4" class="tab-content hidden">
+            <div id="day-3" class="tab-content hidden">
                 <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
                     <table class="min-w-full">
                         <thead class="bg-gray-100">
@@ -11524,7 +11193,7 @@
                 </div>
             </div>
             
-            <div id="day-5" class="tab-content hidden">
+            <div id="day-4" class="tab-content hidden">
                 <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
                     <table class="min-w-full">
                         <thead class="bg-gray-100">
