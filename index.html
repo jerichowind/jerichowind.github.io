@@ -47,7 +47,7 @@
         <!-- Header -->
         <header class="mb-8">
             <h1 class="text-4xl font-bold text-gray-800 mb-2">Jericho Beach Wind Forecast</h1>
-            <p class="text-gray-600">Last updated: 2025-08-08 21:34 PDT</p>
+            <p class="text-gray-600">Last updated: 2025-08-08 22:04 PDT</p>
         </header>
 
         <!-- Forecast Section -->
@@ -69,36 +69,30 @@
                     <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
                         border-blue-500 text-blue-600"
                         data-tab="day-0">
-                        Fri 08/08
-                    </button>
-                    
-                    <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
-                        border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                        data-tab="day-1">
                         Sat 08/09
                     </button>
                     
                     <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
                         border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                        data-tab="day-2">
+                        data-tab="day-1">
                         Sun 08/10
                     </button>
                     
                     <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
                         border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                        data-tab="day-3">
+                        data-tab="day-2">
                         Mon 08/11
                     </button>
                     
                     <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
                         border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                        data-tab="day-4">
+                        data-tab="day-3">
                         Tue 08/12
                     </button>
                     
                     <button class="tab-button py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
                         border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                        data-tab="day-5">
+                        data-tab="day-4">
                         Wed 08/13
                     </button>
                     
@@ -108,331 +102,6 @@
             <!-- Tab Content -->
             
             <div id="day-0" class="tab-content ">
-                <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
-                    <table class="min-w-full">
-                        <thead class="bg-gray-100">
-                            <tr>
-                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Time</th>
-                                
-                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    
-                                        Windy Gfs27 Long
-                                    
-                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
-                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
-                                </th>
-                                
-                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    
-                                        Windy Ecmwf
-                                    
-                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
-                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
-                                </th>
-                                
-                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    
-                                        Windy Iconglobal
-                                    
-                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
-                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
-                                </th>
-                                
-                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    
-                                        Windfinder
-                                    
-                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
-                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
-                                </th>
-                                
-                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    
-                                        Pirateweather
-                                    
-                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
-                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
-                                </th>
-                                
-                                <th class="px-4 py-3 text-center text-sm font-medium text-gray-700">
-                                    
-                                        WeatherLabs
-                                    
-                                    <div class="text-xs text-gray-500 font-normal wind-header">Speed | Gust | Dir</div>
-                                    <div class="text-xs text-gray-500 font-normal temp-header hidden">Temperature</div>
-                                </th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                            
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 text-sm">
-                                    <div class="font-medium flex items-center">
-                                        
-                                        <span class="weather-icon">
-                                            ⛅
-                                            
-                                        </span>
-                                        
-                                        21:00
-                                    </div>
-                                </td>
-                                
-                                <td class="px-4 py-3 text-center text-sm">
-                                    
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-gray-100 text-gray-600
-                                                ">
-                                                1
-                                            </span>
-                                            <span class="text-gray-600">2</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(172deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-green-100 text-green-800
-                                            ">
-                                            17.2°C
-                                        </span>
-                                    </div>
-                                    
-                                    
-                                </td>
-                                
-                                <td class="px-4 py-3 text-center text-sm">
-                                    
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-gray-100 text-gray-600
-                                                ">
-                                                1
-                                            </span>
-                                            <span class="text-gray-600">4</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(82deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-green-100 text-green-800
-                                            ">
-                                            18.9°C
-                                        </span>
-                                    </div>
-                                    
-                                    
-                                </td>
-                                
-                                <td class="px-4 py-3 text-center text-sm">
-                                    
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-gray-100 text-gray-600
-                                                ">
-                                                1
-                                            </span>
-                                            <span class="text-gray-600">6</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(59deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-green-100 text-green-800
-                                            ">
-                                            19.1°C
-                                        </span>
-                                    </div>
-                                    
-                                    
-                                </td>
-                                
-                                <td class="px-4 py-3 text-center text-sm">
-                                    
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-gray-100 text-gray-600
-                                                ">
-                                                1
-                                            </span>
-                                            <span class="text-gray-600">1</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(127.56deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-green-100 text-green-800
-                                            ">
-                                            18.0°C
-                                        </span>
-                                    </div>
-                                    
-                                    
-                                </td>
-                                
-                                <td class="px-4 py-3 text-center text-sm">
-                                    
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-green-100 text-green-800
-                                                ">
-                                                3
-                                            </span>
-                                            <span class="text-gray-600">5</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(50deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-green-100 text-green-800
-                                            ">
-                                            19.3°C
-                                        </span>
-                                    </div>
-                                    
-                                    
-                                </td>
-                                
-                                <td class="px-4 py-3 text-center text-sm">
-                                    
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-gray-100 text-gray-600
-                                                ">
-                                                2
-                                            </span>
-                                            <span class="text-gray-600">3</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(95.27059936523438deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-green-100 text-green-800
-                                            ">
-                                            18.6°C
-                                        </span>
-                                    </div>
-                                    
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Legend -->
-                <div class="mt-4 flex flex-wrap gap-2 sm:gap-4 text-sm">
-                    <div class="wind-legend">
-                        <div class="flex flex-wrap items-center gap-2 sm:gap-4">
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-gray-100 text-gray-600">Light</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">&lt; 3 knots</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-green-100 text-green-800">Low</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">3-9 knots</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-yellow-100 text-yellow-800">Medium</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">9-16 knots</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-orange-100 text-orange-800">Strong</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">16-25 knots</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-red-100 text-red-800">Very Strong</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">&gt; 25 knots</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="temp-legend hidden">
-                        <div class="flex flex-wrap items-center gap-2 sm:gap-4">
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-blue-100 text-blue-800">Cold</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">&lt; 10°C</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-green-100 text-green-800">Cool</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">10-20°C</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-yellow-100 text-yellow-800">Warm</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">20-30°C</span>
-                            </div>
-                            <div class="flex items-center space-x-1 sm:space-x-2">
-                                <span class="px-2 py-1 rounded text-xs bg-red-100 text-red-800">Hot</span>
-                                <span class="text-gray-600 text-xs sm:text-sm">&gt; 30°C</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="day-1" class="tab-content hidden">
                 <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
                     <table class="min-w-full">
                         <thead class="bg-gray-100">
@@ -619,7 +288,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(318.06deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(313.14deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -629,7 +298,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-green-100 text-green-800
                                             ">
-                                            16.0°C
+                                            17.0°C
                                         </span>
                                     </div>
                                     
@@ -681,11 +350,11 @@
                                                 ">
                                                 2
                                             </span>
-                                            <span class="text-gray-600">3</span>
+                                            <span class="text-gray-600">4</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(94.29227447509766deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(92.72708129882812deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -695,7 +364,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-green-100 text-green-800
                                             ">
-                                            17.5°C
+                                            17.7°C
                                         </span>
                                     </div>
                                     
@@ -832,7 +501,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(50.129999999999995deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(54.44deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -892,13 +561,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                3
+                                                4
                                             </span>
                                             <span class="text-gray-600">5</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(101.65866088867188deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(101.72016906738281deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -908,7 +577,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-green-100 text-green-800
                                             ">
-                                            18.6°C
+                                            18.8°C
                                         </span>
                                     </div>
                                     
@@ -1045,7 +714,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(50.129999999999995deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(54.44deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1107,11 +776,11 @@
                                                 ">
                                                 5
                                             </span>
-                                            <span class="text-gray-600">7</span>
+                                            <span class="text-gray-600">8</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(101.18485260009766deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(100.43401336669922deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1121,7 +790,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-green-100 text-green-800
                                             ">
-                                            19.4°C
+                                            19.5°C
                                         </span>
                                     </div>
                                     
@@ -1258,7 +927,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(50.129999999999995deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(54.44deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1320,11 +989,11 @@
                                                 ">
                                                 7
                                             </span>
-                                            <span class="text-gray-600">9</span>
+                                            <span class="text-gray-600">10</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(101.01081085205078deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(101.21458435058594deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1465,13 +1134,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                4
+                                                3
                                             </span>
-                                            <span class="text-gray-600">4</span>
+                                            <span class="text-gray-600">3</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(62.83000000000004deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(73.57deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1531,13 +1200,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                8
+                                                9
                                             </span>
-                                            <span class="text-gray-600">11</span>
+                                            <span class="text-gray-600">12</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(101.26612854003906deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(101.09759521484375deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1547,7 +1216,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            20.5°C
+                                            20.4°C
                                         </span>
                                     </div>
                                     
@@ -1678,13 +1347,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                4
+                                                3
                                             </span>
-                                            <span class="text-gray-600">4</span>
+                                            <span class="text-gray-600">3</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(62.83000000000004deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(73.57deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1750,7 +1419,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(101.19755554199219deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(101.19363403320312deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1891,13 +1560,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                4
+                                                3
                                             </span>
-                                            <span class="text-gray-600">4</span>
+                                            <span class="text-gray-600">3</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(62.83000000000004deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(73.57deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1963,7 +1632,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(101.15276336669922deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(100.98616790771484deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -2110,7 +1779,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(76.42000000000002deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(70.50999999999999deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -2176,7 +1845,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(101.69454956054688deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(100.91507720947266deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -2323,7 +1992,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(76.42000000000002deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(70.50999999999999deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -2389,7 +2058,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(101.38760375976562deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(101.38394165039062deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -2536,7 +2205,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(76.42000000000002deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(70.50999999999999deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -2602,7 +2271,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(100.47998809814453deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(100.98406982421875deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -2745,11 +2414,11 @@
                                                 ">
                                                 1
                                             </span>
-                                            <span class="text-gray-600">1</span>
+                                            <span class="text-gray-600">2</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(5.300000000000011deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(4.930000000000007deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -2815,7 +2484,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(102.24896240234375deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(100.99947357177734deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -2825,7 +2494,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            21.6°C
+                                            21.7°C
                                         </span>
                                     </div>
                                     
@@ -2958,11 +2627,11 @@
                                                 ">
                                                 1
                                             </span>
-                                            <span class="text-gray-600">1</span>
+                                            <span class="text-gray-600">2</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(5.300000000000011deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(4.930000000000007deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -3028,7 +2697,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(98.37538146972656deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(99.51994323730469deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -3171,11 +2840,11 @@
                                                 ">
                                                 1
                                             </span>
-                                            <span class="text-gray-600">1</span>
+                                            <span class="text-gray-600">2</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(5.300000000000011deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(4.930000000000007deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -3241,7 +2910,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(94.33760833740234deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(93.42474365234375deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -3313,7 +2982,7 @@
                 </div>
             </div>
             
-            <div id="day-2" class="tab-content hidden">
+            <div id="day-1" class="tab-content hidden">
                 <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
                     <table class="min-w-full">
                         <thead class="bg-gray-100">
@@ -3492,7 +3161,7 @@
                                     <div class="wind-data space-y-1">
                                         <div class="flex justify-center items-center space-x-2">
                                             <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-green-100 text-green-800
+                                                bg-gray-100 text-gray-600
                                                 ">
                                                 3
                                             </span>
@@ -3500,7 +3169,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(115.86000000000001deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(117.12deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -3566,7 +3235,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(96.1980209350586deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(97.30809020996094deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -3576,7 +3245,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-green-100 text-green-800
                                             ">
-                                            19.3°C
+                                            19.4°C
                                         </span>
                                     </div>
                                     
@@ -3707,13 +3376,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                7
+                                                6
                                             </span>
-                                            <span class="text-gray-600">7</span>
+                                            <span class="text-gray-600">6</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(106.73000000000002deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(103.97000000000003deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -3773,13 +3442,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                7
+                                                8
                                             </span>
-                                            <span class="text-gray-600">10</span>
+                                            <span class="text-gray-600">11</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(95.77034759521484deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(97.3134994506836deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -3789,7 +3458,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-green-100 text-green-800
                                             ">
-                                            19.8°C
+                                            20.0°C
                                         </span>
                                     </div>
                                     
@@ -3920,13 +3589,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                7
+                                                6
                                             </span>
-                                            <span class="text-gray-600">7</span>
+                                            <span class="text-gray-600">6</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(106.73000000000002deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(103.97000000000003deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -3986,13 +3655,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-yellow-100 text-yellow-800
                                                 ">
-                                                10
+                                                11
                                             </span>
-                                            <span class="text-gray-600">14</span>
+                                            <span class="text-gray-600">15</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(98.73380279541016deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(98.54608154296875deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -4002,7 +3671,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            20.5°C
+                                            20.6°C
                                         </span>
                                     </div>
                                     
@@ -4133,13 +3802,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                7
+                                                6
                                             </span>
-                                            <span class="text-gray-600">7</span>
+                                            <span class="text-gray-600">6</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(106.73000000000002deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(103.97000000000003deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -4205,7 +3874,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(98.61286926269531deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(99.44339752197266deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -4346,13 +4015,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                7
+                                                6
                                             </span>
                                             <span class="text-gray-600">8</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(113.37deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(111.33999999999997deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -4414,11 +4083,11 @@
                                                 ">
                                                 12
                                             </span>
-                                            <span class="text-gray-600">16</span>
+                                            <span class="text-gray-600">17</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(99.83899688720703deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(99.37589263916016deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -4428,7 +4097,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            22.0°C
+                                            22.1°C
                                         </span>
                                     </div>
                                     
@@ -4559,13 +4228,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                7
+                                                6
                                             </span>
                                             <span class="text-gray-600">8</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(113.37deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(111.33999999999997deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -4631,7 +4300,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(98.89895629882812deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(100.14994812011719deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -4772,13 +4441,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                7
+                                                6
                                             </span>
                                             <span class="text-gray-600">8</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(113.37deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(111.33999999999997deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -4840,11 +4509,11 @@
                                                 ">
                                                 12
                                             </span>
-                                            <span class="text-gray-600">17</span>
+                                            <span class="text-gray-600">16</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(99.3234634399414deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(98.71880340576172deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -4854,7 +4523,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            23.3°C
+                                            23.4°C
                                         </span>
                                     </div>
                                     
@@ -4985,13 +4654,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                4
+                                                3
                                             </span>
-                                            <span class="text-gray-600">8</span>
+                                            <span class="text-gray-600">7</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(119.82deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(119.48000000000002deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -5001,7 +4670,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            23.0°C
+                                            24.0°C
                                         </span>
                                     </div>
                                     
@@ -5057,7 +4726,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(99.89812469482422deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(99.23051452636719deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -5067,7 +4736,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            23.6°C
+                                            23.8°C
                                         </span>
                                     </div>
                                     
@@ -5198,13 +4867,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                4
+                                                3
                                             </span>
-                                            <span class="text-gray-600">8</span>
+                                            <span class="text-gray-600">7</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(119.82deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(119.48000000000002deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -5214,7 +4883,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            23.0°C
+                                            24.0°C
                                         </span>
                                     </div>
                                     
@@ -5270,7 +4939,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(99.35060119628906deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(99.80816650390625deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -5280,7 +4949,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            23.6°C
+                                            23.9°C
                                         </span>
                                     </div>
                                     
@@ -5411,13 +5080,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                4
+                                                3
                                             </span>
-                                            <span class="text-gray-600">8</span>
+                                            <span class="text-gray-600">7</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(119.82deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(119.48000000000002deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -5427,7 +5096,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            23.0°C
+                                            24.0°C
                                         </span>
                                     </div>
                                     
@@ -5477,13 +5146,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                8
+                                                9
                                             </span>
-                                            <span class="text-gray-600">11</span>
+                                            <span class="text-gray-600">12</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(99.36845397949219deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(99.10655212402344deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -5493,7 +5162,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            23.6°C
+                                            23.7°C
                                         </span>
                                     </div>
                                     
@@ -5624,13 +5293,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-gray-100 text-gray-600
                                                 ">
-                                                2
+                                                1
                                             </span>
-                                            <span class="text-gray-600">3</span>
+                                            <span class="text-gray-600">1</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(125.5deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(359.84000000000003deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -5690,13 +5359,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                6
+                                                7
                                             </span>
                                             <span class="text-gray-600">9</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(98.71593475341797deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(99.4580307006836deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -5706,7 +5375,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            23.2°C
+                                            23.4°C
                                         </span>
                                     </div>
                                     
@@ -5837,13 +5506,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-gray-100 text-gray-600
                                                 ">
-                                                2
+                                                1
                                             </span>
-                                            <span class="text-gray-600">3</span>
+                                            <span class="text-gray-600">1</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(125.5deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(359.84000000000003deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -5905,11 +5574,11 @@
                                                 ">
                                                 4
                                             </span>
-                                            <span class="text-gray-600">6</span>
+                                            <span class="text-gray-600">7</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(100.63916778564453deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(99.25975036621094deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -5919,7 +5588,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            22.7°C
+                                            22.8°C
                                         </span>
                                     </div>
                                     
@@ -6050,13 +5719,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-gray-100 text-gray-600
                                                 ">
-                                                2
+                                                1
                                             </span>
-                                            <span class="text-gray-600">3</span>
+                                            <span class="text-gray-600">1</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(125.5deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(359.84000000000003deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -6116,13 +5785,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                3
+                                                4
                                             </span>
                                             <span class="text-gray-600">5</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(98.29765319824219deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(97.2415771484375deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -6194,7 +5863,7 @@
                 </div>
             </div>
             
-            <div id="day-3" class="tab-content hidden">
+            <div id="day-2" class="tab-content hidden">
                 <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
                     <table class="min-w-full">
                         <thead class="bg-gray-100">
@@ -6375,13 +6044,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                7
+                                                9
                                             </span>
-                                            <span class="text-gray-600">8</span>
+                                            <span class="text-gray-600">9</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(113.80000000000001deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(113.76999999999998deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -6443,11 +6112,11 @@
                                                 ">
                                                 6
                                             </span>
-                                            <span class="text-gray-600">9</span>
+                                            <span class="text-gray-600">8</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(93.87320709228516deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(93.9908676147461deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -6457,7 +6126,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            20.1°C
+                                            20.2°C
                                         </span>
                                     </div>
                                     
@@ -6594,7 +6263,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(108.63999999999999deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(109.43deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -6604,7 +6273,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            22.0°C
+                                            21.0°C
                                         </span>
                                     </div>
                                     
@@ -6652,15 +6321,15 @@
                                     <div class="wind-data space-y-1">
                                         <div class="flex justify-center items-center space-x-2">
                                             <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-green-100 text-green-800
+                                                bg-yellow-100 text-yellow-800
                                                 ">
-                                                8
+                                                9
                                             </span>
-                                            <span class="text-gray-600">11</span>
+                                            <span class="text-gray-600">13</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(96.23657989501953deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(97.35404968261719deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -6670,7 +6339,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            20.7°C
+                                            20.8°C
                                         </span>
                                     </div>
                                     
@@ -6807,7 +6476,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(108.63999999999999deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(109.43deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -6817,7 +6486,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            22.0°C
+                                            21.0°C
                                         </span>
                                     </div>
                                     
@@ -6867,13 +6536,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-yellow-100 text-yellow-800
                                                 ">
-                                                10
+                                                11
                                             </span>
-                                            <span class="text-gray-600">14</span>
+                                            <span class="text-gray-600">15</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(97.94170379638672deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(97.99298095703125deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -6883,7 +6552,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            21.3°C
+                                            21.5°C
                                         </span>
                                     </div>
                                     
@@ -7020,7 +6689,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(108.63999999999999deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(109.43deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -7030,7 +6699,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            22.0°C
+                                            21.0°C
                                         </span>
                                     </div>
                                     
@@ -7080,13 +6749,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-yellow-100 text-yellow-800
                                                 ">
-                                                11
+                                                12
                                             </span>
-                                            <span class="text-gray-600">15</span>
+                                            <span class="text-gray-600">16</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(98.63612365722656deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(98.74449157714844deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -7233,7 +6902,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(116.10000000000002deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(113.89999999999998deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -7295,11 +6964,11 @@
                                                 ">
                                                 12
                                             </span>
-                                            <span class="text-gray-600">16</span>
+                                            <span class="text-gray-600">17</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(99.18392944335938deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(99.4250717163086deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -7446,7 +7115,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(116.10000000000002deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(113.89999999999998deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -7512,7 +7181,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(99.19278717041016deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(99.07466888427734deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -7522,7 +7191,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            23.5°C
+                                            23.3°C
                                         </span>
                                     </div>
                                     
@@ -7659,7 +7328,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(116.10000000000002deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(113.89999999999998deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -7719,13 +7388,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-yellow-100 text-yellow-800
                                                 ">
-                                                13
+                                                12
                                             </span>
-                                            <span class="text-gray-600">18</span>
+                                            <span class="text-gray-600">17</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(98.4842758178711deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(98.9856185913086deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -7735,7 +7404,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            24.0°C
+                                            23.9°C
                                         </span>
                                     </div>
                                     
@@ -7866,13 +7535,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                4
+                                                5
                                             </span>
-                                            <span class="text-gray-600">7</span>
+                                            <span class="text-gray-600">8</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(118.75deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(121.13999999999999deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -7934,11 +7603,11 @@
                                                 ">
                                                 12
                                             </span>
-                                            <span class="text-gray-600">16</span>
+                                            <span class="text-gray-600">17</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(98.99866485595703deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(98.18333435058594deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -7948,7 +7617,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            24.2°C
+                                            24.4°C
                                         </span>
                                     </div>
                                     
@@ -8079,13 +7748,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                4
+                                                5
                                             </span>
-                                            <span class="text-gray-600">7</span>
+                                            <span class="text-gray-600">8</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(118.75deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(121.13999999999999deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -8151,7 +7820,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(97.96340942382812deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(98.81721496582031deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -8292,13 +7961,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                4
+                                                5
                                             </span>
-                                            <span class="text-gray-600">7</span>
+                                            <span class="text-gray-600">8</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(118.75deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(121.13999999999999deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -8364,7 +8033,7 @@
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(98.24449157714844deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(97.75545501708984deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -8505,13 +8174,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                3
+                                                4
                                             </span>
-                                            <span class="text-gray-600">4</span>
+                                            <span class="text-gray-600">6</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(94.80000000000001deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(112.04000000000002deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -8573,11 +8242,11 @@
                                                 ">
                                                 8
                                             </span>
-                                            <span class="text-gray-600">11</span>
+                                            <span class="text-gray-600">12</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(97.75628662109375deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(97.27906799316406deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -8587,7 +8256,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            23.9°C
+                                            24.0°C
                                         </span>
                                     </div>
                                     
@@ -8718,13 +8387,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                3
+                                                4
                                             </span>
-                                            <span class="text-gray-600">4</span>
+                                            <span class="text-gray-600">6</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(94.80000000000001deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(112.04000000000002deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -8784,13 +8453,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                6
+                                                7
                                             </span>
                                             <span class="text-gray-600">9</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(97.15862274169922deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(96.94705200195312deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -8931,13 +8600,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                3
+                                                4
                                             </span>
-                                            <span class="text-gray-600">4</span>
+                                            <span class="text-gray-600">6</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(94.80000000000001deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(112.04000000000002deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -8997,13 +8666,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                6
+                                                5
                                             </span>
-                                            <span class="text-gray-600">9</span>
+                                            <span class="text-gray-600">8</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(97.15862274169922deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(97.75813293457031deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -9013,7 +8682,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-yellow-100 text-yellow-800
                                             ">
-                                            23.3°C
+                                            22.7°C
                                         </span>
                                     </div>
                                     
@@ -9075,7 +8744,7 @@
                 </div>
             </div>
             
-            <div id="day-4" class="tab-content hidden">
+            <div id="day-3" class="tab-content hidden">
                 <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
                     <table class="min-w-full">
                         <thead class="bg-gray-100">
@@ -9256,13 +8925,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-gray-100 text-gray-600
                                                 ">
-                                                2
+                                                1
                                             </span>
-                                            <span class="text-gray-600">4</span>
+                                            <span class="text-gray-600">3</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(356.97deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(25.69999999999999deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -9440,15 +9109,15 @@
                                     <div class="wind-data space-y-1">
                                         <div class="flex justify-center items-center space-x-2">
                                             <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-gray-100 text-gray-600
+                                                bg-green-100 text-green-800
                                                 ">
-                                                3
+                                                4
                                             </span>
-                                            <span class="text-gray-600">3</span>
+                                            <span class="text-gray-600">4</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(83.39999999999998deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(91.82999999999998deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -9626,15 +9295,15 @@
                                     <div class="wind-data space-y-1">
                                         <div class="flex justify-center items-center space-x-2">
                                             <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-gray-100 text-gray-600
+                                                bg-green-100 text-green-800
                                                 ">
-                                                3
+                                                4
                                             </span>
-                                            <span class="text-gray-600">3</span>
+                                            <span class="text-gray-600">4</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(83.39999999999998deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(91.82999999999998deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -9812,15 +9481,15 @@
                                     <div class="wind-data space-y-1">
                                         <div class="flex justify-center items-center space-x-2">
                                             <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-gray-100 text-gray-600
+                                                bg-green-100 text-green-800
                                                 ">
-                                                3
+                                                4
                                             </span>
-                                            <span class="text-gray-600">3</span>
+                                            <span class="text-gray-600">4</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(83.39999999999998deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(91.82999999999998deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -10002,11 +9671,11 @@
                                                 ">
                                                 5
                                             </span>
-                                            <span class="text-gray-600">5</span>
+                                            <span class="text-gray-600">6</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(90.49000000000001deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(95.29000000000002deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -10188,11 +9857,11 @@
                                                 ">
                                                 5
                                             </span>
-                                            <span class="text-gray-600">5</span>
+                                            <span class="text-gray-600">6</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(90.49000000000001deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(95.29000000000002deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -10374,11 +10043,11 @@
                                                 ">
                                                 5
                                             </span>
-                                            <span class="text-gray-600">5</span>
+                                            <span class="text-gray-600">6</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(90.49000000000001deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(95.29000000000002deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -10560,11 +10229,11 @@
                                                 ">
                                                 3
                                             </span>
-                                            <span class="text-gray-600">3</span>
+                                            <span class="text-gray-600">5</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(46.389999999999986deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(79.17000000000002deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -10746,11 +10415,11 @@
                                                 ">
                                                 3
                                             </span>
-                                            <span class="text-gray-600">3</span>
+                                            <span class="text-gray-600">5</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(46.389999999999986deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(79.17000000000002deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -10932,11 +10601,11 @@
                                                 ">
                                                 3
                                             </span>
-                                            <span class="text-gray-600">3</span>
+                                            <span class="text-gray-600">5</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(46.389999999999986deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(79.17000000000002deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -11108,7 +10777,34 @@
                                 
                                 <td class="px-4 py-3 text-center text-sm">
                                     
-                                    <span class="text-gray-400 text-xs">No data</span>
+                                    
+                                    
+                                    <!-- Wind Data -->
+                                    <div class="wind-data space-y-1">
+                                        <div class="flex justify-center items-center space-x-2">
+                                            <span class="px-2 py-1 rounded text-xs font-medium
+                                                bg-gray-100 text-gray-600
+                                                ">
+                                                3
+                                            </span>
+                                            <span class="text-gray-600">3</span>
+                                        </div>
+                                        <div class="flex justify-center items-center">
+                                            <div class="wind-arrow-container">
+                                                <div class="wind-arrow" style="transform: rotate(95.25deg)"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Temperature Data -->
+                                    <div class="temp-data hidden">
+                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
+                                            bg-yellow-100 text-yellow-800
+                                            ">
+                                            20.0°C
+                                        </span>
+                                    </div>
+                                    
                                     
                                 </td>
                                 
@@ -11267,7 +10963,34 @@
                                 
                                 <td class="px-4 py-3 text-center text-sm">
                                     
-                                    <span class="text-gray-400 text-xs">No data</span>
+                                    
+                                    
+                                    <!-- Wind Data -->
+                                    <div class="wind-data space-y-1">
+                                        <div class="flex justify-center items-center space-x-2">
+                                            <span class="px-2 py-1 rounded text-xs font-medium
+                                                bg-gray-100 text-gray-600
+                                                ">
+                                                3
+                                            </span>
+                                            <span class="text-gray-600">3</span>
+                                        </div>
+                                        <div class="flex justify-center items-center">
+                                            <div class="wind-arrow-container">
+                                                <div class="wind-arrow" style="transform: rotate(95.25deg)"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Temperature Data -->
+                                    <div class="temp-data hidden">
+                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
+                                            bg-yellow-100 text-yellow-800
+                                            ">
+                                            20.0°C
+                                        </span>
+                                    </div>
+                                    
                                     
                                 </td>
                                 
@@ -11426,7 +11149,34 @@
                                 
                                 <td class="px-4 py-3 text-center text-sm">
                                     
-                                    <span class="text-gray-400 text-xs">No data</span>
+                                    
+                                    
+                                    <!-- Wind Data -->
+                                    <div class="wind-data space-y-1">
+                                        <div class="flex justify-center items-center space-x-2">
+                                            <span class="px-2 py-1 rounded text-xs font-medium
+                                                bg-gray-100 text-gray-600
+                                                ">
+                                                3
+                                            </span>
+                                            <span class="text-gray-600">3</span>
+                                        </div>
+                                        <div class="flex justify-center items-center">
+                                            <div class="wind-arrow-container">
+                                                <div class="wind-arrow" style="transform: rotate(95.25deg)"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Temperature Data -->
+                                    <div class="temp-data hidden">
+                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
+                                            bg-yellow-100 text-yellow-800
+                                            ">
+                                            20.0°C
+                                        </span>
+                                    </div>
+                                    
                                     
                                 </td>
                                 
@@ -11524,7 +11274,7 @@
                 </div>
             </div>
             
-            <div id="day-5" class="tab-content hidden">
+            <div id="day-4" class="tab-content hidden">
                 <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
                     <table class="min-w-full">
                         <thead class="bg-gray-100">
@@ -11703,15 +11453,15 @@
                                     <div class="wind-data space-y-1">
                                         <div class="flex justify-center items-center space-x-2">
                                             <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-yellow-100 text-yellow-800
+                                                bg-green-100 text-green-800
                                                 ">
-                                                10
+                                                3
                                             </span>
-                                            <span class="text-gray-600">11</span>
+                                            <span class="text-gray-600">4</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(302.34000000000003deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(279.15deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -11893,11 +11643,11 @@
                                                 ">
                                                 7
                                             </span>
-                                            <span class="text-gray-600">10</span>
+                                            <span class="text-gray-600">8</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(301.13deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(327.28999999999996deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -12079,11 +11829,11 @@
                                                 ">
                                                 7
                                             </span>
-                                            <span class="text-gray-600">10</span>
+                                            <span class="text-gray-600">8</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(301.13deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(327.28999999999996deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -12265,11 +12015,11 @@
                                                 ">
                                                 7
                                             </span>
-                                            <span class="text-gray-600">10</span>
+                                            <span class="text-gray-600">8</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(301.13deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(327.28999999999996deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -12449,13 +12199,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                6
+                                                3
                                             </span>
-                                            <span class="text-gray-600">10</span>
+                                            <span class="text-gray-600">5</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(289.06deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(327.05deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -12465,7 +12215,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-green-100 text-green-800
                                             ">
-                                            16.0°C
+                                            17.0°C
                                         </span>
                                     </div>
                                     
@@ -12635,13 +12385,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                6
+                                                3
                                             </span>
-                                            <span class="text-gray-600">10</span>
+                                            <span class="text-gray-600">5</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(289.06deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(327.05deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -12651,7 +12401,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-green-100 text-green-800
                                             ">
-                                            16.0°C
+                                            17.0°C
                                         </span>
                                     </div>
                                     
@@ -12821,13 +12571,13 @@
                                             <span class="px-2 py-1 rounded text-xs font-medium
                                                 bg-green-100 text-green-800
                                                 ">
-                                                6
+                                                3
                                             </span>
-                                            <span class="text-gray-600">10</span>
+                                            <span class="text-gray-600">5</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(289.06deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(327.05deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -12837,7 +12587,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-green-100 text-green-800
                                             ">
-                                            16.0°C
+                                            17.0°C
                                         </span>
                                     </div>
                                     
@@ -12999,34 +12749,7 @@
                                 
                                 <td class="px-4 py-3 text-center text-sm">
                                     
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-green-100 text-green-800
-                                                ">
-                                                5
-                                            </span>
-                                            <span class="text-gray-600">7</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(241.46deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-green-100 text-green-800
-                                            ">
-                                            16.0°C
-                                        </span>
-                                    </div>
-                                    
+                                    <span class="text-gray-400 text-xs">No data</span>
                                     
                                 </td>
                                 
@@ -13185,34 +12908,7 @@
                                 
                                 <td class="px-4 py-3 text-center text-sm">
                                     
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-green-100 text-green-800
-                                                ">
-                                                5
-                                            </span>
-                                            <span class="text-gray-600">7</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(241.46deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-green-100 text-green-800
-                                            ">
-                                            16.0°C
-                                        </span>
-                                    </div>
-                                    
+                                    <span class="text-gray-400 text-xs">No data</span>
                                     
                                 </td>
                                 
@@ -13371,34 +13067,7 @@
                                 
                                 <td class="px-4 py-3 text-center text-sm">
                                     
-                                    
-                                    
-                                    <!-- Wind Data -->
-                                    <div class="wind-data space-y-1">
-                                        <div class="flex justify-center items-center space-x-2">
-                                            <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-green-100 text-green-800
-                                                ">
-                                                5
-                                            </span>
-                                            <span class="text-gray-600">7</span>
-                                        </div>
-                                        <div class="flex justify-center items-center">
-                                            <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(241.46deg)"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Temperature Data -->
-                                    <div class="temp-data hidden">
-                                        <span class="px-3 py-2 rounded-lg text-sm font-medium
-                                            bg-green-100 text-green-800
-                                            ">
-                                            16.0°C
-                                        </span>
-                                    </div>
-                                    
+                                    <span class="text-gray-400 text-xs">No data</span>
                                     
                                 </td>
                                 
@@ -13563,15 +13232,15 @@
                                     <div class="wind-data space-y-1">
                                         <div class="flex justify-center items-center space-x-2">
                                             <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-green-100 text-green-800
+                                                bg-gray-100 text-gray-600
                                                 ">
-                                                4
+                                                2
                                             </span>
-                                            <span class="text-gray-600">5</span>
+                                            <span class="text-gray-600">2</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(202.06deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(131.27999999999997deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -13581,7 +13250,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-green-100 text-green-800
                                             ">
-                                            16.0°C
+                                            18.0°C
                                         </span>
                                     </div>
                                     
@@ -13749,15 +13418,15 @@
                                     <div class="wind-data space-y-1">
                                         <div class="flex justify-center items-center space-x-2">
                                             <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-green-100 text-green-800
+                                                bg-gray-100 text-gray-600
                                                 ">
-                                                4
+                                                2
                                             </span>
-                                            <span class="text-gray-600">5</span>
+                                            <span class="text-gray-600">2</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(202.06deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(131.27999999999997deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -13767,7 +13436,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-green-100 text-green-800
                                             ">
-                                            16.0°C
+                                            18.0°C
                                         </span>
                                     </div>
                                     
@@ -13935,15 +13604,15 @@
                                     <div class="wind-data space-y-1">
                                         <div class="flex justify-center items-center space-x-2">
                                             <span class="px-2 py-1 rounded text-xs font-medium
-                                                bg-green-100 text-green-800
+                                                bg-gray-100 text-gray-600
                                                 ">
-                                                4
+                                                2
                                             </span>
-                                            <span class="text-gray-600">5</span>
+                                            <span class="text-gray-600">2</span>
                                         </div>
                                         <div class="flex justify-center items-center">
                                             <div class="wind-arrow-container">
-                                                <div class="wind-arrow" style="transform: rotate(202.06deg)"></div>
+                                                <div class="wind-arrow" style="transform: rotate(131.27999999999997deg)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -13953,7 +13622,7 @@
                                         <span class="px-3 py-2 rounded-lg text-sm font-medium
                                             bg-green-100 text-green-800
                                             ">
-                                            16.0°C
+                                            18.0°C
                                         </span>
                                     </div>
                                     
